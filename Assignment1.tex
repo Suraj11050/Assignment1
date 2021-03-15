@@ -141,50 +141,44 @@ expectation of $X$
  outcomes and outcome of one dice is independent of the outcome of other dice.
  \\$\therefore$ Total possible outcomes are $^{6}C_{1}\,\times\,^{6}C_{1}=36$
  \null \par \null
- Let us assume P(X) $=$ probability of obtaining $X$ number of 6's as there are only
- 2 dice $X$ can take values 0,1,2 
- \begin{align*}
- P(X_1) &= \text{Probability of outcome 6 for dice 1} &= \dfrac{1}{6} \\
-P(X_2) &= \text{Probability of outcome 6 for dice 2} &= \dfrac{1}{6}   
- \end{align*}
-Note that $X_1$ and $X_2$ are independent events as outcome of one dice do not depend 
-on other
- \null \par \null
-Then,
-\begin{align*}
-P(X=0) &= P(\overline{X_1}\;and\;\overline{X_2}) \\
-       &= P(\overline{X_1})\cdot P(\overline{X_2}) \\
-       &= (1-P(X_1))\cdot (1-P(X_2)) \\
-       &= \dfrac{5}{6} \times \dfrac{5}{6} \\
-P(X=0) &= \dfrac{25}{36}
-\end{align*}
+Let X be a random variable denoting number of sixes in the above case. Then by Binomial
+Distribution 
+\begin{align}
+    \pr{X=k}&=\binom{n}{k}\,p^k\,\brak{1-p}^{n-k} \\
+    k&=0,\dots,n 
+\end{align}
+\null \par
+Where $k=$ 0,1,2 and $n=2$ (Number of dice) \\
+   $p$ = Probability of outcome 6 on a dice \\
+   $$p = \dfrac{1}{6}$$
+\null \par \null
+From equation (0.0.1) we obtain the following
 \newpage
 \begin{align*}
-P(X=1) &= P(\overline{X_1}\;and\;X_2) + P(X_1\;and\;\overline{X_2}) \\
-       &= P(\overline{X_1})\cdot P(X_2) + P(X_1)\cdot P(\overline{X_2})  \\
-       &= \dfrac{5}{6} \times \dfrac{1}{6} + \dfrac{1}{6} \times \dfrac{5}{6} \\
-P(X=1) &= \dfrac{10}{36} \\ \\
-P(X=2) &= P(X_1\;and\;X_2)  \\
-       &= P(X_1)\cdot P(X_2)  \\
-       &= \dfrac{1}{6} \times \dfrac{1}{6} \\
-P(X=2) &= \dfrac{1}{36}
+\pr{X=0} &= \binom{2}{0}\,\brak{\dfrac{1}{6}}^{0}\,\brak{1-\dfrac{1}{6}}^{2} =\dfrac{25}{36} \\
+\pr{X=1} &= \binom{2}{1}\,\brak{\dfrac{1}{6}}^{1}\,\brak{1-\dfrac{1}{6}}^{1} =\dfrac{10}{36} \\
+\pr{X=2} &= \binom{2}{2}\,\brak{\dfrac{1}{6}}^{2}\,\brak{1-\dfrac{1}{6}}^{0} =\dfrac{1}{36} \\
 \end{align*}
-\null \par
+
 The probability distribution table is 
 \begin{table}[hbt!]
 \begin{tabular}{|l|c|c|c|}
 \hline
-\multicolumn{1}{|c|}{x} & 0 & 1 & 2 \\ \hline
-P(X)                    &$\dfrac{25}{36}$   &$\dfrac{10}{36}$   &$\dfrac{1}{36}$ \\ \hline
+\multicolumn{1}{|c|}{X} & 0 & 1 & 2 \\ \hline
+\pr{X}                    &$\dfrac{25}{36}$   &$\dfrac{10}{36}$   &$\dfrac{1}{36}$ \\ \hline
 \end{tabular}
 \end{table}
 \begin{align*}
-    E(X) & =\sum XP(X)\\
-    & = 0\times\dfrac{25}{36} + 1\times\dfrac{10}{36} + 2\times\dfrac{1}{36} \\
-    & = \dfrac{12}{36} \\
-    &= \dfrac{1}{3} \\
+    E(k) & =\sum k\pr{k}\\
+         & =\sum k\,\binom{n}{k}\,p^k\,\brak{1-p}^{n-k}\\ 
+         & = n\cdot p\,\sum \binom{n-1}{k-1}\,p^{k-1}\,\brak{1-p}^{(n-1)-(k-1)}\\ 
+         & = n \cdot p \\
+ E(X=k) &= n\cdot p = 2\times\dfrac{1}{6} = \dfrac{1}{3}
 \end{align*}
-$$\therefore E(X) = \dfrac{1}{3}$$
+$$\therefore E(X)  = \dfrac{1}{3}$$
 
-Hence Expectation value of $X=\dfrac{1}{3}=0.33$ 
+Hence Expectation value of $X=\dfrac{1}{3}=0.333333$ 
+\null \par \null 
+\hrule
 \end{document}
+
