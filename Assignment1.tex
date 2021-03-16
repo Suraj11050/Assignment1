@@ -169,16 +169,16 @@ The probability distribution table is
 \end{tabular}
 \end{table}
 \begin{align*}
-    E(k) & =\sum k\pr{k}\\
-         & =\sum k\,\binom{n}{k}\,p^k\,\brak{1-p}^{n-k}\\ 
-         & = n\cdot p\,\sum \binom{n-1}{k-1}\,p^{k-1}\,\brak{1-p}^{(n-1)-(k-1)}\\ 
-         & = n \cdot p \\
- E(X=k) &= n\cdot p = 2\times\dfrac{1}{6} = \dfrac{1}{3}
+\mathbb{E}(X=k) & =\sum_{k=0}^{n} k\pr{k}\\
+    & =\sum_{k=0}^{n} k\,\binom{n}{k}\,p^k\,\brak{1-p}^{n-k}\\ 
+    & = n\cdot p\,\sum_{k=1}^{n-1} \binom{n-1}{k-1}\,p^{k-1}\,\brak{1-p}^{(n-1)-(k-1)}\\
+    & = n\cdot p\,\brak{1 + (1-p)}^{n-1}\\
+    & = n \cdot p \\
+ \mathbb{E}(X=k) &= n\cdot p = 2\times\dfrac{1}{6} = \dfrac{1}{3}
 \end{align*}
-$$\therefore E(X)  = \dfrac{1}{3}$$
+$$\therefore \mathbb{E}(X)  = \dfrac{1}{3}$$
 
 Hence Expectation value of $X=\dfrac{1}{3}=0.333333$ 
 \null \par \null 
 \hrule
 \end{document}
-
