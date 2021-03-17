@@ -144,15 +144,18 @@ expectation of $X$
 Let X be a random variable denoting number of sixes in the above case. Then by Binomial
 Distribution 
 \begin{align}
-    \pr{X=k}&=\binom{n}{k}\,p^k\,\brak{1-p}^{n-k} \\
-    k&=0,\dots,n 
+    \pr{X=k}&=\binom{n}{k}\,p^k\,\brak{1-p}^{n-k} \label{a} \\
+    k&=0,\dots,n \label{b}
 \end{align}
-\null \par
-Where $k=$ 0,1,2 and $n=2$ (Number of dice) \\
-   $p$ = Probability of outcome 6 on a dice \\
-   $$p = \dfrac{1}{6}$$
+
+\begin{align*}
+\text{Where}\;k &= 0,1,2\\
+              n &= 2 \\
+              p &= \text{Probability of outcome 6 on a dice} \\
+              p &= \dfrac{1}{6}
+\end{align*}
 \null \par \null
-From equation (0.0.1) we obtain the following
+From equation \eqref{a} we obtain the following
 \newpage
 \begin{align*}
 \pr{X=0} &= \binom{2}{0}\,\brak{\dfrac{1}{6}}^{0}\,\brak{1-\dfrac{1}{6}}^{2} =\dfrac{25}{36} \\
@@ -165,7 +168,7 @@ The probability distribution table is
 \begin{tabular}{|l|c|c|c|}
 \hline
 \multicolumn{1}{|c|}{X} & 0 & 1 & 2 \\ \hline
-\pr{X}                    &$\dfrac{25}{36}$   &$\dfrac{10}{36}$   &$\dfrac{1}{36}$ \\ \hline
+\pr{X=k}                    &$\dfrac{25}{36}$   &$\dfrac{10}{36}$   &$\dfrac{1}{36}$ \\ \hline
 \end{tabular}
 \end{table}
 \begin{align*}
